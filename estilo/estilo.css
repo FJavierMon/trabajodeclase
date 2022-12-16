@@ -1,0 +1,101 @@
+:root{
+    --card-width: 250px;
+    --card-height: 300px;
+    --card-image-height: 150px;
+    --padding: 25px;
+    --margin: 15px;
+}
+*{ margin:0px;
+    padding:0px;
+    font-family: Arial, Helvetica, sans-serif;
+   }
+
+
+body{
+    display: grid;
+    grid-template-areas: 
+    'header header'
+    'aside main'
+    'footer footer';
+    grid-template-columns: 15% 85%;
+
+}
+
+header{
+    grid-area: header;
+
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font: oblique 300% cursive;
+    color: rgb(216, 15, 15);
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font: oblique 200% cursive;
+    color: blue;
+}
+.distinta{ color: blueviolet;}
+.cabecera{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: lightgreen;
+    padding: var(--padding);
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(222, 110, 226);
+    padding-left: 5%;   
+    padding-right: 5%;
+}
+aside{
+   
+    padding-left: 10%;
+    border: 0.1em solid black;
+    grid-area: aside;
+}
+main{
+    padding: var(--padding);
+    grid-area: main;
+    background-color: rgb(168, 168, 212);
+}
+
+footer{
+    grid-area: footer;
+    background-color: darkorange;
+}
+.video1 {text-align:center;
+
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: var(--padding) 0px;
+    gap: var(--margin);
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    width: var(--card-width);
+    height: var(--card-height);
+    background: rgb(252, 140, 140);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   
+}
+
+
+.card > h2, .card > .card-body{
+    padding: var(--padding);
+}
+.card > img{
+    width: 100%;
+    height: var(--card-image-height);
+    object-fit: cover;
+}
